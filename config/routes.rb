@@ -1,9 +1,16 @@
 Rails.application.routes.draw do
 
+<<<<<<< HEAD
   ActiveAdmin.routes(self)
+=======
+  get 'users/show'
+
+>>>>>>> 3b9343f1c1b5d283e54327b286ba196fdf1320b3
   resources :musics
   resources :events
   devise_for :users
+
+  resources :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
