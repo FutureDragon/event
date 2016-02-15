@@ -9,6 +9,8 @@
 </p>
 
 
+
+
 <h3>
   Wo?
 </h3>
@@ -23,3 +25,21 @@
 <h3>Was ist geplant?</h3>
   <h4><%= @event.description %></h4>
 
+</div>
+<div class="col-md-2 col-md-offset-1">
+<% if current_user.typ == 0 %>
+  <h3>Bewerben</h3>
+  <p>
+    Für dieses Event als Band bewerben
+  </p>
+<% else %>
+  <% if @event.user_id == current_user.id %>
+  <p>
+    <%= link_to 'Event bearbeiten', edit_event_path %>
+  </p>
+    <p>
+      <%= link_to 'Event löschen',  method: :delete, data: { confirm: 'Are you sure?' } %>
+    </p>
+    <% end %>
+<% end %>
+</div>
