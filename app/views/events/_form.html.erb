@@ -35,7 +35,11 @@
     <%= f.label :picture %><br>
     <%= f.text_field :picture %>
   </div>
-  <div class="actions">
+    <div>
+      <input name="event[user_id]" type="hidden" value="<%= current_user.id %>" id="event_user_id">
+    </div>
+
+    <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>

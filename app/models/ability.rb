@@ -8,7 +8,7 @@ class Ability
         can :manage, :all
 
       end
-    else
+
       if user.typ == 0
         can :create, Music
       end
@@ -17,5 +17,12 @@ class Ability
         can :create, Event
       end
     end
+  else
+    can :read, :all
+
   end
+
+
+
+
 end
