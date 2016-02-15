@@ -1,11 +1,17 @@
-<p id="notice"><%= notice %></p>
+
 
 
 <% if current_user %>
 Email:<%= current_user.email %>
 Typ:<%= current_user.typ %>
+    <% if current_user.has_role?(:admin) %>
+        <p>Admin ist da</p>
 
+    <% end %>
 <% end %>
+
+
+
 <h1>Listing Events</h1>
 
 <table class="table table-hover">
