@@ -50,6 +50,7 @@
           <ul class="nav navbar-nav">
             <li><%= link_to "Events", events_path  %></li>
             <li><%= link_to "Musik", musics_path  %></li>
+            <li><%= link_to "Ausloggen", destroy_user_session_path, method: :delete  %></li>
           </ul>
         </div>
       </div>

@@ -1,5 +1,11 @@
 <p id="notice"><%= notice %></p>
 
+
+<% if current_user %>
+Email:<%= current_user.email %>
+Typ:<%= current_user.typ %>
+
+<% end %>
 <h1>Listing Events</h1>
 
 <table>
