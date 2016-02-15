@@ -28,6 +28,8 @@ gem 'twitter-bootstrap-rails'
 gem 'less-rails'
 gem 'devise'
 gem 'rolify'
+gem 'activeadmin', github: 'gregbell/active_admin'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
