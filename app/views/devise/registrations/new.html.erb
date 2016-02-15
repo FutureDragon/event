@@ -21,6 +21,17 @@
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>
 
+  <div>
+    <select>
+      <option value="0">
+        Musiker
+      </option>
+      <option value="1">
+        Veranstalter
+      </option>
+    </select>
+  </div>
+
   <div class="actions">
     <%= f.submit "Sign up" %>
   </div>
