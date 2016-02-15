@@ -4,7 +4,6 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
 
 
-  ActiveAdmin.routes(self)
 
 
   get 'users/show'
