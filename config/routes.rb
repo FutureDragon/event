@@ -1,8 +1,14 @@
 Rails.application.routes.draw do
 
+<<<<<<< 5530ce1d182b1ab30d03094c2912a1a1a7ce648d
 <<<<<<< HEAD
   ActiveAdmin.routes(self)
 =======
+=======
+
+  ActiveAdmin.routes(self)
+
+>>>>>>> Bug Fix Admin
   get 'users/show'
 
 >>>>>>> 3b9343f1c1b5d283e54327b286ba196fdf1320b3
