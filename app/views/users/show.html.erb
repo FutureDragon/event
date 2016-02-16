@@ -22,4 +22,11 @@
     </div>
 <% end %>
 
-
+<h2>Deine Anfragen</h2>
+<p>
+  <% @anfrage.each do |anfrage| %>
+    <ul>
+      <li><%= link_to anfrage.titel, anfrage %></li>
+    </ul>
+<% end %>
+</p>

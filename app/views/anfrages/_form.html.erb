@@ -19,10 +19,12 @@
     <%= f.label :text %><br>
     <%= f.text_area :text %>
   </div>
+  <div>
+    <input name="anfrage[empfaenger_id]" type="hidden" value="<%= @event.user_id %>" id="anfrage_empfaenger_id">
+    <input name="anfrage[absender_id]" type="hidden" value="<%= current_user.id %>" id="anfrage_absender_id">
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>
-<p>
-  Empfänger und Abender als Hidden einbauen
-</p>
