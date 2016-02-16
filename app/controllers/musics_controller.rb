@@ -4,13 +4,7 @@ class MusicsController < ApplicationController
   # GET /musics
   # GET /musics.json
   def index
-    @musics = if params[:user_id].present?
-               Music.find(parms[:user_id])
-             else
-               @musics = Music.all
-             end
-
-
+     @musics = Music.all
   end
 
   # GET /musics/1
