@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
 
 
+  resources :anfrages
+
+  get 'anfrages/new/:id', to: 'anfrages#new'
+
   get 'welcome/index'
 
   ActiveAdmin.routes(self)

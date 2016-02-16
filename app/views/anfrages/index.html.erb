@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Anfrages</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Empfaenger</th>
+      <th>Absender</th>
+      <th>Titel</th>
+      <th>Text</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @anfrages.each do |anfrage| %>
+      <tr>
+        <td><%= anfrage.empfaenger_id %></td>
+        <td><%= anfrage.absender_id %></td>
+        <td><%= anfrage.titel %></td>
+        <td><%= anfrage.text %></td>
+        <td><%= link_to 'Show', anfrage %></td>
+        <td><%= link_to 'Edit', edit_anfrage_path(anfrage) %></td>
+        <td><%= link_to 'Destroy', anfrage, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Anfrage', new_anfrage_path %>

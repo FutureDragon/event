@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Empfaenger:</strong>
+  <%= @anfrage.empfaenger_id %>
+</p>
+
+<p>
+  <strong>Absender:</strong>
+  <%= @anfrage.absender_id %>
+</p>
+
+<p>
+  <strong>Titel:</strong>
+  <%= @anfrage.titel %>
+</p>
+
+<p>
+  <strong>Text:</strong>
+  <%= @anfrage.text %>
+</p>
+
+<%= link_to 'Edit', edit_anfrage_path(@anfrage) %> |
+<%= link_to 'Back', anfrages_path %>

@@ -30,7 +30,7 @@
   <% if current_user.typ == 0 %>
     <h3>Bewerben</h3>
     <p>
-      Für dieses Event als Band bewerben
+      <%= link_to 'Für Event bewerben', new_anfrage_path %>
     </p>
   <% else %>
     <% if @event.user_id == current_user.id %>
