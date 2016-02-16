@@ -25,7 +25,9 @@
           </p>
           <% end %>
       <% else %>
-        <p>Anfrage an Band schicken</p>
+          <h3>Anfrage</h3>
+          <p><%= link_to 'Anfrage schicken', "../anfrages/new/#{@music.id}" %></p>
+
       <% end %>
     </div>
 <% end %>

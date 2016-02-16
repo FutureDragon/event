@@ -22,6 +22,7 @@
   <div>
     <input name="anfrage[empfaenger_id]" type="hidden" value="<%= @event.user_id %>" id="anfrage_empfaenger_id">
     <input name="anfrage[absender_id]" type="hidden" value="<%= current_user.id %>" id="anfrage_absender_id">
+    <input name="anfrage[event_id]" type="hidden" value="<%= @event.id %>" id="anfrage_event_id">
   </div>
 
   <div class="actions">

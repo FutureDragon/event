@@ -1,6 +1,18 @@
 <p id="notice"><%= notice %></p>
 <div class="page-header">
-  <h1>Anfrage für <small>von <%= @sender[0].email %></small></h1>
+  <h1>
+    Anfrage für
+
+      <small>
+        <%= @event[0].name %>
+      </small>
+
+    <small>
+      <small>
+        von <%= @sender[0].email %>
+      </small>
+    </small>
+  </h1>
 </div>
 
 
