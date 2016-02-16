@@ -23,8 +23,23 @@
 <% end %>
 
 <h2>Deine Anfragen</h2>
+<h4>Bekommen</h4>
+<% if @anfrageBekommen.size == 0 %>
+  Es liegen noch keine Anfragen vor
+<% end %>
 <p>
-  <% @anfrage.each do |anfrage| %>
+  <% @anfrageBekommen.each do |anfrage| %>
+    <ul>
+      <li><%= link_to anfrage.titel, anfrage %></li>
+    </ul>
+<% end %>
+</p>
+<h4>Geschrieben</h4>
+<% if @anfrageGeschrieben.size == 0 %>
+    Es wurden noch keine Anfragen geschrieben
+<% end %>
+<p>
+  <% @anfrageGeschrieben.each do |anfrage| %>
     <ul>
       <li><%= link_to anfrage.titel, anfrage %></li>
     </ul>
