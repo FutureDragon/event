@@ -1,24 +1,15 @@
 <p id="notice"><%= notice %></p>
+<div class="page-header">
+  <h1>Anfrage für <small>von <%= @sender[0].email %></small></h1>
+</div>
 
-<p>
-  <strong>Empfaenger:</strong>
-  <%= @anfrage.empfaenger_id %>
-</p>
 
-<p>
-  <strong>Absender:</strong>
-  <%= @anfrage.absender_id %>
-</p>
 
-<p>
-  <strong>Titel:</strong>
+
+<p class="lead">
   <%= @anfrage.titel %>
 </p>
 
-<p>
-  <strong>Text:</strong>
+<p >
   <%= @anfrage.text %>
 </p>
-
-<%= link_to 'Edit', edit_anfrage_path(@anfrage) %> |
-<%= link_to 'Back', anfrages_path %>
