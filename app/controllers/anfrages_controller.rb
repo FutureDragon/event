@@ -29,10 +29,14 @@ class AnfragesController < InheritedResources::Base
       @event = Music.where id:@anfrage.event_id
     end
 
-    if @anfrage.empfaenger_id = current_user.id
+
+
+    if @anfrage.empfaenger_id == current_user.id
       # Nachricht auf gelesen Setzen
-      @anfrage.update(:gelesen => 1)
+      @anfrage.update_attribute(:gelesen, 1)
     end
+
+  end
 
     def antwort
 
@@ -44,7 +48,7 @@ class AnfragesController < InheritedResources::Base
 
     end
 
-  end
+
 
   private
 

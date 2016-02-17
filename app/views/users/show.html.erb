@@ -25,7 +25,7 @@
 <h2>Deine Anfragen</h2>
 <h4>Bekommen</h4>
 <% if @anfrageBekommen.size == 0 %>
-  Es liegen noch keine Anfragen vor
+  Schade, du hast noch keine Anfragen erhalten :(
 <% end %>
 <p>
   <% @anfrageBekommen.each do |anfrage| %>
@@ -33,7 +33,7 @@
       <li>
         <%= link_to anfrage.titel, anfrage %>
         <% if anfrage.gelesen == nil %>
-            <span class="badge">Neu</span>
+            <span class="label label-info">Neu</span>
         <% end %>
       </li>
     </ul>
@@ -42,7 +42,7 @@
 </p>
 <h4>Geschrieben</h4>
 <% if @anfrageGeschrieben.size == 0 %>
-    Es wurden noch keine Anfragen geschrieben
+    Du hast noch keine Anfragen geschrieben, trau dich und kontaktiere jemanden ;)
 <% end %>
 <p>
   <% @anfrageGeschrieben.each do |anfrage| %>
