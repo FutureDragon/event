@@ -22,11 +22,17 @@ class AnfragesController < InheritedResources::Base
     @sender = User.where id: @anfrage.absender_id
 
     if @sender[0].typ == 0
+      # Event laden
       @event = Event.where id:@anfrage.event_id
     else
+      # Musik laden
       @event = Music.where id:@anfrage.event_id
     end
 
+    if @anfrage.empfaenger_id = current_user.id
+      # Nachricht auf gelesen Setzen
+      @anfrage.update(:gelesen => 1)
+    end
 
 
   end

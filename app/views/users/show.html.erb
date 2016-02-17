@@ -30,8 +30,14 @@
 <p>
   <% @anfrageBekommen.each do |anfrage| %>
     <ul>
-      <li><%= link_to anfrage.titel, anfrage %></li>
+      <li>
+        <%= link_to anfrage.titel, anfrage %>
+        <% if anfrage.gelesen == nil %>
+            <span class="badge">Neu</span>
+        <% end %>
+      </li>
     </ul>
+
 <% end %>
 </p>
 <h4>Geschrieben</h4>
