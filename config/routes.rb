@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   resources :anfrages
 
   get 'anfrages/new/:id', to: 'anfrages#new'
+  get 'anfrages/news/antwort/:id', to: 'anfrages#antwort'
+
 
   get 'welcome/index'
 
@@ -16,6 +18,9 @@ Rails.application.routes.draw do
 
 
   resources :musics
+
+  get 'musics/show/:id', to: 'musics#showUser'
+
   resources :events
   devise_for :users
 

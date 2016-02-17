@@ -8,7 +8,7 @@
       <h2>Deine Musik Verwalten</h2>
       <ul>
         <li><%= link_to 'Neue Musik hinzufügen', new_music_path %></li>
-        <li><%= link_to 'Deine Musik anzeigen', musics_path(current_user.id) %></li>
+        <li><%= link_to 'Deine Musik anzeigen', "../musics/show/#{current_user.id}" %></li>
       </ul>
     </div>
 <% end %>

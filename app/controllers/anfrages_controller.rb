@@ -34,6 +34,15 @@ class AnfragesController < InheritedResources::Base
       @anfrage.update(:gelesen => 1)
     end
 
+    def antwort
+
+
+
+      @anfrage = Anfrage.new
+
+      @anfrageAlt = Anfrage.where id: params[:id]
+
+    end
 
   end
 

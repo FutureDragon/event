@@ -27,8 +27,9 @@
       <% else %>
           <h3>Anfrage</h3>
           <p><%= link_to 'Anfrage schicken', "../anfrages/new/#{@music.id}" %></p>
-
       <% end %>
+      <h3>Weitere Songs</h3>
+      <p><a href="show/<%= @music.user_id %>">Hier findest du weitere Lieder von diesem Künster</a></p>
     </div>
 <% end %>
 

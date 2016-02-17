@@ -12,6 +12,11 @@ class MusicsController < ApplicationController
   def show
   end
 
+  def showUser
+    @user = User.find(params[:id])
+    @musics = Music.where user_id: params[:id]
+  end
+
   # GET /musics/new
   def new
     @music = Music.new
