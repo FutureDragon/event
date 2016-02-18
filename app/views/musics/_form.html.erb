@@ -12,15 +12,15 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br>
+    <label>Musiktitel</label><br>
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :url %><br>
+    <label>Link zum Youtube Video</label><br>
     <%= f.text_field :url %>
   </div>
   <div class="field">
-    <%= f.label :description %><br>
+    <label>Beschreibung</label><br>
     <%= f.text_area :description %>
   </div>
     <div>
@@ -28,6 +28,6 @@
     </div>
 
   <div class="actions">
-    <%= f.submit %>
+    <input type="submit" value="Speichern" name="commit">
   </div>
 <% end %>

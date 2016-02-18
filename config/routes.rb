@@ -21,7 +21,9 @@ Rails.application.routes.draw do
 
   get 'musics/show/:id', to: 'musics#showUser'
 
+
   resources :events
+  get 'events/show/:id', to: 'events#showUser'
   devise_for :users
 
   resources :users

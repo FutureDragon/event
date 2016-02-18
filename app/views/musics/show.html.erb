@@ -13,23 +13,25 @@
 <h4><%= @music.description %></h4>
 
 </div>
-<% if current_user.present? %>
+
+  <% if current_user.present? %>
     <div class="col-md-2 col-md-offset-1">
-      <% if current_user.typ == 0 %>
-          <% if @music.user_id == current_user.id %>
-          <p>
-            <%= link_to 'Musik bearbeiten', edit_music_path %>
-          </p>
-          <p>
-            <%= link_to 'Musik löschen',  method: :delete, data: { confirm: 'Are you sure?' } %>
-          </p>
-          <% end %>
-      <% else %>
-          <h3>Anfrage</h3>
-          <p><%= link_to 'Anfrage schicken', "../anfrages/new/#{@music.id}" %></p>
-      <% end %>
+        <% if current_user.typ == 0 %>
+            <% if @music.user_id == current_user.id %>
+            <p>
+              <%= link_to 'Musik bearbeiten', edit_music_path %>
+            </p>
+            <p>
+              <%= link_to 'Musik löschen',  method: :delete, data: { confirm: 'Are you sure?' } %>
+            </p>
+            <% end %>
+        <% else %>
+            <h3>Anfrage</h3>
+            <p><%= link_to 'Anfrage schicken', "../anfrages/new/#{@music.id}" %></p>
+        <% end %>
       <h3>Weitere Songs</h3>
       <p><a href="show/<%= @music.user_id %>">Hier findest du weitere Lieder von diesem Künster</a></p>
-    </div>
-<% end %>
+      </div>
+  <% end %>
+
 

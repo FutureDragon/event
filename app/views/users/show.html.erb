@@ -15,9 +15,10 @@
 <% if @user.typ == 1 || current_user.has_role?(:admin) %>
     <div>
       <h2>Deine Events Verwalten</h2>
-      <p>
-        <%= link_to 'Neues Event hinzufügen', new_event_path %>
-      </p>
+      <ul>
+        <li><%= link_to 'Neues Event hinzufügen', new_event_path %></li>
+        <li><%= link_to 'Deine Events anzeigen', "../events/show/#{current_user.id}" %></li>
+      </ul>
       
     </div>
 <% end %>

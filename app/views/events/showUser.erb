@@ -1,0 +1,35 @@
+<div class="page-header">
+  <h1>
+    Events von
+    <small><%= @user.email %></small>
+  </h1>
+
+</div>
+<% if @events.size == 0 %>
+    <p class="alert alert-danger ">
+      Es wurde noch keine Events hinterlegt
+    </p>
+<% else %>
+    <table class="table-hover table">
+      <thead>
+      <tr>
+        <th colspan="3">Name</th>
+      </tr>
+      </thead>
+      <tbody>
+      <% @events.each do |event| %>
+          <tr>
+            <td><%= link_to event.name , event %></td>
+            <% if event.user_id == current_user.id %>
+                <td>
+                  <%= link_to "bearbeiten", edit_event_path(event.id) %>
+                </td>
+                <td>
+                  <%= link_to "löschen", "#" %>
+                </td>
+            <% end %>
+          </tr>
+      <% end %>
+      </tbody>
+    </table>
+<% end %>

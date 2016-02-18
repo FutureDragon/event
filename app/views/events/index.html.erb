@@ -1,9 +1,9 @@
-<h1>Listing Events</h1>
+<h1>Anstehende Events</h1>
 
 <table class="table table-hover">
   <thead>
     <tr>
-      <th>Was?</th>
+      <th>Was ist los?</th>
       <th>Wo?</th>
       <th>Wann?</th>
     </tr>
@@ -13,7 +13,7 @@
       <tr>
         <td><%= link_to event.name, event %></td>
         <td><%= event.location %></td>
-        <td><%= event.date.strftime("%d.%m.%Y") %></td>
+        <td><%= event.date.strftime("%d.%m.%Y") %> - <%= event.time.strftime("%H:%M") %> Uhr</td>
       </tr>
     <% end %>
   </tbody>
