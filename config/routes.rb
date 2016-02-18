@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :anfrages
 
   get 'anfrages/new/:id', to: 'anfrages#new'
-  get 'anfrages/news/antwort/:id', to: 'anfrages#antwort'
+  get 'anfrages/new/antwort/:id', to: 'anfrages#antwort'
 
 
   get 'welcome/index'

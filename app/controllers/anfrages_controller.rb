@@ -38,15 +38,26 @@ class AnfragesController < InheritedResources::Base
 
   end
 
-    def antwort
+  def antwort
+    @anfrage = Anfrage.new
+
+    @anfrageLast = Anfrage.find(params[:id])
+    # Alle Anfragen die von den beiden User und zu dem passenden Event verschickt wurden nach Ids aufsteigend Sortiert
+    @anfrageVerlauf = Anfrage.where("(absender_id = ? OR empfaenger_id = ?) And event_id = ? ",
+                                    current_user.id, current_user.id, @anfrageLast.event_id).order(id: :asc)
 
 
-
-      @anfrage = Anfrage.new
-
-      @anfrageAlt = Anfrage.where id: params[:id]
-
+    @user= User.find(@anfrageVerlauf[0].absender_id)
+    # Es wird vom abensender der Ersten Nachricht ermittelt, ob es sich um ein Event oder Musik handelte
+    if @user.id == 0
+      @event = Event.find(@anfrageLast.event_id)
+    else
+      @event = Music.find(@anfrageLast.event_id)
     end
+
+    @userAbsenderLetzteAnfrage = User.find(@anfrageLast.absender_id)
+
+  end
 
 
 

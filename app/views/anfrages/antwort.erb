@@ -1,13 +1,47 @@
 <div class="page-header">
   <h1>
-    Antwort
-
+    Antwort an
     <small>
-      <%=  %>
+      <%= @userAbsenderLetzteAnfrage.email %>
     </small>
-
   </h1>
 </div>
-<%= render 'form' %>
+<form id="new_anfrage" class="new_anfrage" method="post" accept-charset="UTF-8" action="/anfrages">
+  <input type="hidden" value="✓" name="utf8">
+  <input type="hidden" value="sXXJ1MfAsXrRCxB6mFy5NE8NIRk3Nrsxro3gspT3SKfZi7fmoqpdpC629hPuNKtdE+bXKfLGh5JUYalVc8a1Xw==" name="authenticity_token">
+  <div class="field">
+    <label for="anfrage_titel">Titel</label>
+    <br>
+    <input id="anfrage_titel" type="text" name="anfrage[titel]" disabled value="<%= @anfrageLast.titel %>">
+  </div>
+  <div class="field">
+    <label for="anfrage_text">Text</label>
+    <br>
+    <textarea id="anfrage_text" name="anfrage[text]"></textarea>
+  </div>
+  <div>
+    <input id="anfrage_empfaenger_id" type="hidden" value="<%= @userAbsenderLetzteAnfrage.id %>" name="anfrage[empfaenger_id]">
+    <input id="anfrage_absender_id" type="hidden" value="<%= current_user.id %>" name="anfrage[absender_id]">
+    <input id="anfrage_event_id" type="hidden" value="<%= @event.id %>" name="anfrage[event_id]">
+  </div>
+  <div class="actions">
+    <input type="submit" value="Create Anfrage" name="commit">
+  </div>
+</form>
 
-<%= link_to 'Back', anfrages_path %>
+
+
+<p>
+  Nachrichten Verlauf:<hr>
+  <p>
+    <% @anfrageVerlauf.each do |anfrage| %>
+      <h5>
+        <%= @userAbsenderLetzteAnfrage.email %> schrieb:
+      </h5>
+      <p>
+        <%= anfrage.text %>
+      </p>
+    <hr>
+    <% end %>
+  </p>
+</p>
