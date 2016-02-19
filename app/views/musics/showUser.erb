@@ -25,7 +25,7 @@
             <%= link_to "bearbeiten", edit_music_path(music.id) %>
           </td>
           <td>
-            <%= link_to "löschen", "#" %>
+            <%= link_to 'löschen', music, method: :delete, data: { confirm: 'Wirklich löschen?' } %>
           </td>
         <% end %>
       </tr>

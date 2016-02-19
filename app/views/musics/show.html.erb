@@ -22,7 +22,7 @@
               <%= link_to 'Musik bearbeiten', edit_music_path %>
             </p>
             <p>
-              <%= link_to 'Musik löschen',  method: :delete, data: { confirm: 'Are you sure?' } %>
+              <%= link_to 'Musik löschen', @music, method: :delete, data: { confirm: 'Wirklich löschen?' } %>
             </p>
             <% end %>
         <% else %>

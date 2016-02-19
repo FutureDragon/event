@@ -38,7 +38,7 @@
       <%= link_to 'Event bearbeiten', edit_event_path %>
     </p>
       <p>
-        <%= link_to 'Event löschen',  method: :delete, data: { confirm: 'Are you sure?' } %>
+        <%= link_to 'Event Löschen', @event, method: :delete, data: { confirm: 'Wirklich löschen?' } %>
       </p>
       <% end %>
   <% end %>
