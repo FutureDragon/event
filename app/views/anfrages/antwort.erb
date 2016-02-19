@@ -2,7 +2,7 @@
   <h1>
     Antwort an
     <small>
-      <%= @userAbsenderLetzteAnfrage.email %>
+      <%= @userAbsenderLetzteAnfrage.username %>
     </small>
   </h1>
 </div>
@@ -36,7 +36,7 @@
   <p>
     <% @anfrageVerlauf.each do |anfrage| %>
       <h5>
-        <%= @userAbsenderLetzteAnfrage.email %> schrieb:
+        <%= @userAbsenderLetzteAnfrage.username %> schrieb:
       </h5>
       <p>
         <%= anfrage.text %>
