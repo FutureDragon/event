@@ -9,11 +9,11 @@ class Ability
 
       end
 
-      if user.typ == 0
+      if user.has_role?(:musiker)
         can :create, Music
       end
 
-      if user.typ == 1
+      if user.has_role?(:veranstalter)
         can :create, Event
       end
     end

@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   get 'anfrages/new/antwort/:id', to: 'anfrages#antwort'
 
 
-  get 'welcome/index'
+  get 'welcome/index', to: 'welcome#index'
 
   ActiveAdmin.routes(self)
 
