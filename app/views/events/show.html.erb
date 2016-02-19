@@ -3,11 +3,11 @@
 <div class="page-header">
   <h1><%= @event.name %></h1>
 </div>
-
+<% if @event.picture != "" %>
 <p>
   <img src="<%= @event.picture %>" class="img-responsive">
 </p>
-
+<% end %>
 
 
 <h3>

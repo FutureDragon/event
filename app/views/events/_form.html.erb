@@ -12,7 +12,7 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br>
+    <label>Name des Events</label><br>
     <%= f.text_field :name %>
   </div>
   <div class="field">
@@ -20,19 +20,19 @@
     <%= f.text_field :location %>
   </div>
   <div class="field">
-    <%= f.label :time %><br>
+    <label>Uhrzeit</label><br>
     <%= f.time_select :time %>
   </div>
   <div class="field">
-    <%= f.label :date %><br>
+    <label>Datum</label><br>
     <%= f.date_select :date %>
   </div>
   <div class="field">
-    <%= f.label :description %><br>
+    <label>Beschreibung</label><br>
     <%= f.text_area :description %>
   </div>
   <div class="field">
-    <%= f.label :picture %><br>
+    <label>URL zum Bild</label><br>
     <%= f.text_field :picture %>
   </div>
     <div>
@@ -40,6 +40,6 @@
     </div>
 
     <div class="actions">
-    <%= f.submit %>
+      <input name="commit" value="Speichern" type="submit">
   </div>
 <% end %>

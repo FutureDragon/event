@@ -33,7 +33,7 @@ class MusicsController < ApplicationController
 
     respond_to do |format|
       if @music.save
-        format.html { redirect_to @music, notice: 'Music was successfully created.' }
+        format.html { redirect_to @music, notice: 'Die Musik wurde erfolgreich hinzugefügt.' }
         format.json { render :show, status: :created, location: @music }
       else
         format.html { render :new }
@@ -47,7 +47,7 @@ class MusicsController < ApplicationController
   def update
     respond_to do |format|
       if @music.update(music_params)
-        format.html { redirect_to @music, notice: 'Music was successfully updated.' }
+        format.html { redirect_to @music, notice: 'Die Musik wurde erfolgreich aktualisiert.' }
         format.json { render :show, status: :ok, location: @music }
       else
         format.html { render :edit }
@@ -61,7 +61,7 @@ class MusicsController < ApplicationController
   def destroy
     @music.destroy
     respond_to do |format|
-      format.html { redirect_to musics_url, notice: 'Music was successfully destroyed.' }
+      format.html { redirect_to musics_url, notice: 'Die Musik wurde gelöscht.' }
       format.json { head :no_content }
     end
   end
