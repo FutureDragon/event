@@ -4,6 +4,9 @@
 </div>
 
 <% if @user.typ == 0 || current_user.has_role?(:admin) %>
+    <ul>
+      <li><a href="edit">Email/Passwort ändern</a></li>
+    </ul>
     <div>
       <h2>Deine Musik Verwalten</h2>
       <ul>
@@ -52,3 +55,4 @@
     </ul>
 <% end %>
 </p>
+

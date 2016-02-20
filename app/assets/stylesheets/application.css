@@ -30,3 +30,20 @@ body{
 table{
     background: rgba(255,255,255,0.8);
 }
+tr:hover{
+    background: rgba(200,200,200,0.1);
+}
+thead th{
+    background: rgba(231, 231, 231, 0.80);
+}
+
+a{
+    font-size: 15px;
+}
+a:hover{
+    background: none;
+    color: black;
+}
+li{
+    margin: 5px;
+}
