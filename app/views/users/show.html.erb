@@ -55,14 +55,16 @@
     </ul>
 <% end %>
 </p>
-<% if @antwortbekommen.size %>
-    <h4>Es liegen neue Antworten vor</h4>
+
     <% @antwortbekommen.each do |antwort| %>
+        <% if antwort.gelesen == nil %>
+        <h4>Deine ungelesenen Antworten</h4>
         <ul>
-          <li><%= link_to antwort.titl, antwort %></li>
+          <li><%= link_to Anfrage.find(antwort.anfrage_id).titel, antwort %></li>
         </ul>
+        <% end %>
     <% end %>
 <p>
 
 </p>
-<% end %>
+

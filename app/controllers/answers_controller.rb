@@ -35,9 +35,9 @@ class AnswersController < InheritedResources::Base
 
 
 
-    if @anfrage.empfaenger_id == current_user.id
+    if @answer.empfaenger_id == current_user.id
       # Nachricht auf gelesen Setzen
-      @anfrage.update_attribute(:gelesen, 1)
+      @answer.update_attribute(:gelesen, 1)
     end
 
   end
