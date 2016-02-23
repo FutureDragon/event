@@ -2,17 +2,18 @@ class AnfragesController < InheritedResources::Base
 
 
   def new
-    if current_user.typ == 0
-      #Musiker schickt Anfrage
-      @event = if params[:id].present?
-         Event.find(params[:id])
-               end
-    else
-      # Veranstalter schickt Anfrage
-      @event = if params[:id].present?
-                 Music.find(params[:id])
-               end
-      end
+
+      if current_user.typ == 0
+        #Musiker schickt Anfrage
+        @event = if params[:id].present?
+           Event.find(params[:id])
+                 end
+      else
+        # Veranstalter schickt Anfrage
+        @event = if params[:id].present?
+                   Music.find(params[:id])
+                 end
+        end
 
     @anfrage = Anfrage.new
   end

@@ -1,11 +1,14 @@
 Rails.application.routes.draw do
 
 
+  resources :answers
   resources :anfrages
 
   get 'anfrages/new/:id', to: 'anfrages#new'
   get 'anfrages/new/antwort/:id', to: 'anfrages#antwort'
 
+
+  get 'answers/new/:id', to: 'answers#new'
 
   get 'welcome/index', to: 'welcome#index'
 

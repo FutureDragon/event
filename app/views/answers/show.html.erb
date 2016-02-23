@@ -1,10 +1,10 @@
 <div class="page-header">
   <h1>
-    Anfrage für
+    Antwort für
 
-      <small>
-        <%= @event[0].name %>
-      </small>
+    <small>
+      <%= @event[0].name %>
+    </small>
 
     <small>
       <small>
@@ -22,10 +22,16 @@
 </p>
 
 <p>
+  <%= @answer.text %>
+</p>
+<hr>
+<h3>Ursprüngliche Nachricht</h3>
+<p>
   <%= @anfrage.text %>
 </p>
 
-<% if @anfrage.absender_id != current_user.id %>
-  <a href="../answers/new/<%= @anfrage.id %>">Antworten</a>
+
+<% if @answer.sender_id != current_user.id %>
+    <a href="../answers/new/<%= @anfrage.id %>">Antworten</a>
 <% end %>
 <%= link_to 'Zurück', :back %>

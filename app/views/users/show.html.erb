@@ -55,4 +55,14 @@
     </ul>
 <% end %>
 </p>
+<% if @antwortbekommen.size %>
+    <h4>Es liegen neue Antworten vor</h4>
+    <% @antwortbekommen.each do |antwort| %>
+        <ul>
+          <li><%= link_to antwort.titl, antwort %></li>
+        </ul>
+    <% end %>
+<p>
 
+</p>
+<% end %>
