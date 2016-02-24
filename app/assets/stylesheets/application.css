@@ -19,13 +19,14 @@ html {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    color: #dcff94;
+    height: 100%;
+
 }
 body{
     background: rgba(255,255,255,0.8);
-    height: 100vh;
-    font-size: 15px;
+    font-size: 17px;
     min-height: 100%;
+    
     width: 100vw;
 
 }
