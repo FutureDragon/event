@@ -19,10 +19,12 @@ Rails.application.routes.draw do
 
   get 'users/show'
 
-
+  get 'musics/all', to: 'musics#showAll'
   resources :musics
 
   get 'musics/show/:id', to: 'musics#showUser'
+
+  post 'musics/genre' , to: 'musics#genre'
 
 
   resources :events

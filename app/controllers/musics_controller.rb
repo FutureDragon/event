@@ -4,7 +4,7 @@ class MusicsController < ApplicationController
   # GET /musics
   # GET /musics.json
   def index
-    @musics = Music.all
+    @musics = Music.all.take(10)
     @genre = Genre.all.order(id: :asc)
   end
 
@@ -17,6 +17,15 @@ class MusicsController < ApplicationController
   def showUser
     @user = User.find(params[:id])
     @musics = Music.where user_id: params[:id]
+  end
+
+  def showAll
+    @musics = Music.all
+    @genre = Genre.all.order(id: :asc)
+  end
+
+  def genre
+    @music = Music.where genre_id: params[:id]
   end
 
   # GET /musics/new

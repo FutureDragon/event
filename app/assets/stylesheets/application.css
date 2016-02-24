@@ -26,8 +26,10 @@ body{
     height: 100vh;
     font-size: 15px;
     min-height: 100%;
+    width: 100vw;
 
 }
+
 table{
     background: rgba(255,255,255,0.8);
 }

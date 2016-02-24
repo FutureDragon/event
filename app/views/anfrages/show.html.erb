@@ -14,7 +14,15 @@
   </h1>
 </div>
 
-
+<% if @antworten.size != 0 %>
+    <h3>Nachrichtenverlauf</h3>
+    <% @antworten.each do |antworten| %>
+      <p>
+        <%= antworten.text %>
+      </p>
+        <hr>
+    <% end %>
+<% end %>
 
 
 <p class="lead">

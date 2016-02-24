@@ -1,22 +1,21 @@
 <div class="page-header">
-  <h1>Neuste Musik</h1>
+<h1>Musik</h1>
 </div>
 <table class="table table-hover">
   <thead>
-    <tr>
-      <th>Name</th>
-      <th>Genre</th>
-    </tr>
+  <tr>
+    <th>Name</th>
+    <th>Genre</th>
+  </tr>
   </thead>
 
   <tbody>
-    <% @musics.each do |music| %>
-    <% @genre_id = music.genre_id %>
+  <% @musics.each do |music| %>
+      <% @genre_id = music.genre_id %>
       <tr>
         <td><%= link_to music.name , music %></td>
         <td><%= @genre[@genre_id-1].name %></td>
       </tr>
-    <% end %>
+  <% end %>
   </tbody>
 </table>
-<a href="musics/all" >alle Anzeigen</a>
