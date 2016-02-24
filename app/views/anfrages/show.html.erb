@@ -15,8 +15,10 @@
 </div>
 
 <% if @antworten.size != 0 %>
-    <h3>Nachrichtenverlauf</h3>
+
     <% @antworten.each do |antworten| %>
+        <% @absender = User.find(antworten.sender_id) %>
+      <%= @absender.username %> schrieb:
       <p>
         <%= antworten.text %>
       </p>
@@ -24,7 +26,7 @@
     <% end %>
 <% end %>
 
-
+<%= @sender[0].username  %> schreieb:
 <p class="lead">
   <%= @anfrage.titel %>
 </p>

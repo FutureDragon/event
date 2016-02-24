@@ -22,7 +22,7 @@
 </h4>
 
 <h3>Was ist geplant?</h3>
-  <h4><%= @event.description %></h4>
+  <h4><%= simple_format(@event.description) %></h4>
 <br>
 </div>
 <% if current_user.present? %>
