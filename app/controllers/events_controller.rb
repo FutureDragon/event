@@ -3,7 +3,7 @@ class EventsController < ApplicationController
   # GET /events
   # GET /events.json
   def index
-    @events = Event.all.order(:date, :time)
+    @events = Event.all.order(:date, :time).take(10)
   end
 
   # GET /events/1
@@ -14,6 +14,10 @@ class EventsController < ApplicationController
   def showUser
     @user = User.find(params[:id])
     @events = Event.where user_id: params[:id]
+  end
+
+  def showAll
+    @events = Event.all.order(:date, :time)
   end
 
   # GET /events/new

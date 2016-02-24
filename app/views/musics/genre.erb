@@ -1,0 +1,26 @@
+<div class="page-header">
+  <h1>Musik mit dem Genre <small><%= @genre.name %></small></h1>
+</div>
+<% if @musics.size != 0 %>
+  <table class="table table-hover">
+    <thead>
+    <tr>
+      <th>Name</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <% @musics.each do |music| %>
+        <% @genre_id = music.genre_id %>
+        <tr>
+          <td><%= link_to music.name , music %></td>
+
+        </tr>
+    <% end %>
+    </tbody>
+  </table>
+<% else %>
+    <p class="alert alert-danger ">
+      Es wurde noch keine Musik zu dem Genre hinzugefügt
+    </p>
+<% end %>

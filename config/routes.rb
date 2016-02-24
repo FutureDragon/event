@@ -20,13 +20,14 @@ Rails.application.routes.draw do
   get 'users/show'
 
   get 'musics/all', to: 'musics#showAll'
+  get 'musics/genre' , to: 'musics#genre'
   resources :musics
 
   get 'musics/show/:id', to: 'musics#showUser'
 
-  post 'musics/genre' , to: 'musics#genre'
 
 
+  get 'events/all', to: 'events#showAll'
   resources :events
   get 'events/show/:id', to: 'events#showUser'
   devise_for :users

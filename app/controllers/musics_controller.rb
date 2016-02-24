@@ -25,7 +25,8 @@ class MusicsController < ApplicationController
   end
 
   def genre
-    @music = Music.where genre_id: params[:id]
+    @genre = Genre.find(params[:genre_id])
+    @musics = Music.where genre_id: params[:genre_id]
   end
 
   # GET /musics/new
