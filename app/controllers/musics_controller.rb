@@ -5,7 +5,7 @@ class MusicsController < ApplicationController
   # GET /musics.json
   def index
     @musics = Music.all
-    @genre = Genre.all
+    @genre = Genre.all.order(id: :asc)
   end
 
   # GET /musics/1
@@ -27,6 +27,7 @@ class MusicsController < ApplicationController
 
   # GET /musics/1/edit
   def edit
+    @genre = Genre.all
   end
 
   # POST /musics

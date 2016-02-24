@@ -11,9 +11,10 @@
 
   <tbody>
     <% @musics.each do |music| %>
+    <% @genre_id = music.genre_id %>
       <tr>
         <td><%= link_to music.name , music %></td>
-        <td><%= music.genre_id %></td>
+        <td><%= @genre[@genre_id-1].name %></td>
       </tr>
     <% end %>
   </tbody>

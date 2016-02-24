@@ -25,6 +25,7 @@ body{
     background: rgba(255,255,255,0.8);
     height: 100vh;
     font-size: 15px;
+    min-height: 100%;
 
 }
 table{
