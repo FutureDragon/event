@@ -24,6 +24,14 @@
     <%= f.text_area :description %>
   </div>
     <div>
+      <label>Genre auswählen</label>
+      <select name="music[genre_id]" id="music_genre_id">
+        <% @genre.each do |genre| %>
+            <option value="<%= genre.id %>"><%= genre.name %></option>
+        <% end %>
+      </select>
+    </div>
+    <div>
       <input name="music[user_id]" type="hidden" value="<%= current_user.id %>" id="music_user_id">
     </div>
 

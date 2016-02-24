@@ -8,3 +8,9 @@
 
 admin = User.create email: 'admin@admin.de', password: 'testtest', password_confirmation: 'testtest', username: 'Admin'
 admin.add_role :admin
+
+Genre.create name: 'Dance'
+Genre.create name: 'Hip Hop'
+Genre.create name: 'Pop'
+Genre.create name: 'Rock'
+Genre.create name: 'Country'

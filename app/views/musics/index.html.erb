@@ -5,6 +5,7 @@
   <thead>
     <tr>
       <th>Name</th>
+      <th>Genre</th>
     </tr>
   </thead>
 
@@ -12,6 +13,7 @@
     <% @musics.each do |music| %>
       <tr>
         <td><%= link_to music.name , music %></td>
+        <td><%= music.genre_id %></td>
       </tr>
     <% end %>
   </tbody>

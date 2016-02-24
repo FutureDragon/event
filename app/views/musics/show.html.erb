@@ -1,7 +1,7 @@
 
 <div class="page-header">
   <h1>
-  <%= @music.name %>
+  <%= @music.name %><small></small>
   </h1>
 </div>
 
@@ -11,6 +11,9 @@
 
 <h3>  Beschreibung:</h3>
 <h4><%= @music.description %></h4>
+<h4>
+  Genre: <%= @genre.name %>
+</h4>
 
 </div>
 

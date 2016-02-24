@@ -5,11 +5,13 @@ class MusicsController < ApplicationController
   # GET /musics.json
   def index
     @musics = Music.all
+    @genre = Genre.all
   end
 
   # GET /musics/1
   # GET /musics/1.json
   def show
+    @genre = Genre.find(@music.genre_id)
   end
 
   def showUser
@@ -20,6 +22,7 @@ class MusicsController < ApplicationController
   # GET /musics/new
   def new
     @music = Music.new
+    @genre = Genre.all
   end
 
   # GET /musics/1/edit
@@ -74,6 +77,6 @@ class MusicsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def music_params
-      params.require(:music).permit(:name, :url, :description, :user_id)
+      params.require(:music).permit(:name, :url, :description, :user_id, :genre_id)
     end
 end
