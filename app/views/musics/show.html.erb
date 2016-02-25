@@ -16,8 +16,8 @@
 </h4>
 <% if current_user.present? %>
   <p>
-  Bewertung: <%= rating_for @music, "url", :star => 5, :disable_after_rate => true %>
-   Durchschnitt <%= rating_for @music, "url", :imdb_avg => true %>
+  Bewertung: <%= rating_for @music %>
+
 
 
   </p>
