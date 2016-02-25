@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
   validates :username, presence: true
 
+  ratyrate_rater
 
   rolify
   # Include default devise modules. Others available are:

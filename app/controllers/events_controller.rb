@@ -3,7 +3,7 @@ class EventsController < ApplicationController
   # GET /events
   # GET /events.json
   def index
-    @events = Event.where("date(date) > ?", Time.now).order(:date, :time).take(10)
+    @events = Event.where("date(date) >= ?", Time.now).order(:date, :time).take(10)
   end
 
   # GET /events/1
