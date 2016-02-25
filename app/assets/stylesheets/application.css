@@ -31,6 +31,14 @@ body{
 
 }
 
+input{
+    background: rgba(255,255,255,0.5);
+}
+
+textarea{
+    background: rgba(255,255,255,0.5);
+}
+
 p{
     font-size: 17px;
 }
