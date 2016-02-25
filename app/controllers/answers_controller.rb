@@ -15,6 +15,10 @@ class AnswersController < InheritedResources::Base
 
     end
 
+    if @anfrage.absender_id == current_user.id
+      @anfrage.absender_id = @anfrage.empfaenger_id
+    end
+
     @answer = Answer.new
   end
 

@@ -20,20 +20,23 @@
         <% @absender = User.find(antworten.sender_id) %>
       <%= @absender.username %> schrieb:
       <p>
-        <%= antworten.text %>
+        <%= simple_format(antworten.text) %>
       </p>
         <hr>
     <% end %>
 <% end %>
 
-<%= @sender[0].username  %> schreieb:
+<%= @sender[0].username  %> schrieb:
 <p class="lead">
   <%= @anfrage.titel %>
 </p>
 
 <p>
-  <%= @anfrage.text %>
+  <%= simple_format(@anfrage.text) %>
 </p>
+<% if @antworten.size != 0 && @anfrage.absender_id == current_user.id %>
+    <a href="../answers/new/<%= @anfrage.id %>">Antworten</a>
+<% end %>
 
 <% if @anfrage.absender_id != current_user.id %>
   <a href="../answers/new/<%= @anfrage.id %>">Antworten</a>

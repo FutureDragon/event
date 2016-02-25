@@ -30,7 +30,7 @@ class AnfragesController < InheritedResources::Base
       @event = Music.where id:@anfrage.event_id
     end
 
-    @antworten = Answer.where id:@anfrage.id
+    @antworten = Answer.where("anfrage_id = ?", @anfrage.id).order(id: :desc)
 
     if @anfrage.empfaenger_id == current_user.id
       # Nachricht auf gelesen Setzen
