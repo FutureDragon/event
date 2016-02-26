@@ -3,17 +3,17 @@ class AnfragesController < InheritedResources::Base
 
   def new
 
-      if current_user.typ == 0
-        #Musiker schickt Anfrage
-        @event = if params[:id].present?
-           Event.find(params[:id])
-                 end
-      else
-        # Veranstalter schickt Anfrage
-        @event = if params[:id].present?
-                   Music.find(params[:id])
-                 end
-        end
+    if current_user.typ == 0
+      #Musiker schickt Anfrage
+      @event = if params[:id].present?
+         Event.find(params[:id])
+               end
+    else
+      # Veranstalter schickt Anfrage
+      @event = if params[:id].present?
+                 Music.find(params[:id])
+               end
+      end
 
     @anfrage = Anfrage.new
   end
@@ -47,7 +47,6 @@ class AnfragesController < InheritedResources::Base
     @anfrageVerlauf = Anfrage.where("(absender_id = ? OR empfaenger_id = ?) And event_id = ? ",
                                     current_user.id, current_user.id, @anfrageLast.event_id).order(id: :asc)
 
-
     @user= User.find(@anfrageVerlauf[0].absender_id)
     # Es wird vom abensender der Ersten Nachricht ermittelt, ob es sich um ein Event oder Musik handelte
     if @user.id == 0
@@ -55,7 +54,6 @@ class AnfragesController < InheritedResources::Base
     else
       @event = Music.find(@anfrageLast.event_id)
     end
-
     @userAbsenderLetzteAnfrage = User.find(@anfrageLast.absender_id)
 
   end
