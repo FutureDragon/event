@@ -32,6 +32,7 @@ gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'cancan'
 
 gem 'ratyrate'
+gem 'contact_us', '~> 1.0.1'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

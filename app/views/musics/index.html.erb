@@ -24,14 +24,20 @@
 <a href="musics/all" >alle Anzeigen</a>
 
 </div>
-<div class="col-md-2 col-md-offset-1">
+<div class="col-md-3  col-sm-3 col-lg-2 col-lg-offset-1">
   <h4>Nach Genre suchen</h4>
-    <form method="get" action="musics/genre" >
+
+    <form method="get" action="musics/genre" class="form-inline">
+
     <select name="genre_id" >
       <% @genre.each do |genre| %>
           <option value="<%= genre.id %>"><%= genre.name %></option>
       <% end %>
     </select>
+
+
     <input type="submit" value="Suchen">
+
     </form>
+
 </div>

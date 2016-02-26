@@ -26,10 +26,12 @@ body{
     background: rgba(255,255,255,0.8);
     font-size: 17px;
     min-height: 100%;
-
+    padding-bottom: 30px;
     width: 100vw;
 
 }
+
+
 
 input{
     background: rgba(255,255,255,0.5);

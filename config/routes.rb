@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   get 'answers/new/:id', to: 'answers#new'
 
   get 'welcome/index', to: 'welcome#index'
+  get '/faq', to: 'welcome#faq'
 
   ActiveAdmin.routes(self)
 
