@@ -1,5 +1,13 @@
 require 'rails_helper'
 
-RSpec.describe Music, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+describe Music do
+  it 'needs a genre' do
+    genre = Genre.new name: 'Rock'
+    music = Music.new name: 'I was made for loving you', url: 'youtube.com', description: 'Kiss'
+
+    expect(music).to_not be_valid
+
+    music.genre << genre
+    expect(music).to be_valid
+  end
 end
