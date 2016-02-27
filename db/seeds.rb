@@ -9,8 +9,8 @@
 admin = User.create email: 'admin@admin.de', password: 'testtest', password_confirmation: 'testtest', username: 'Admin'
 admin.add_role :admin
 
-User.create email: 'test@test.de', password: 'testtest', password_confirmation: 'testtest', username: 'TestUser', typ: 0
-User.create email: 'test2@test.de', password: 'testtest', password_confirmation: 'testtest', username: 'TestUser2', typ: 1
+User.create email: 'fledermaus@buzzbeat.de', password: 'qwertz12', password_confirmation: 'testtest', username: 'FledermausLady123', typ: 0
+User.create email: 'evil@buzzbeat.de', password: 'qwertz12', password_confirmation: 'testtest', username: 'EvilCrusader', typ: 1
 
 Genre.create name: 'Dance'
 Genre.create name: 'Hip Hop'
