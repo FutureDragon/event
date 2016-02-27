@@ -115,31 +115,31 @@
 * evil@buzzbeat.de mit Rolle: Veranstalter (PW:qwertz123)
 
 #User Stories
-User Story 1
+User Story 1:
 Benutzer soll sich entweder als Musiker oder Veranstalter registrieren können.
 
-User Story 2
+User Story 2:
 Musiker sollen ihre eigene Musik von Youtube einbinden können.
 
-User Story 3
+User Story 3:
 Veranstalter sollen ihre eigenen Events erstellen können.
 
-User Story 4
+User Story 4:
 Veranstalter sollen Musiker kontaktieren und sie zu ihren Events einladen können.
 
-User Story 5
+User Story 5:
 Musiker können sich beim Veranstalter für Events bewerben.
 
-User Story 6
+User Story 6:
 Auf den Übersichtsseiten sollen die 10 aktuellsten Songs und Events angezeigt werden.
 
-User Story 7
+User Story 7:
 Benutzer können sich alle Songs und Events mit der Schaltfläche "Alle Anzeigen" anzeigen lassen.
 
-User Story 8
+User Story 8:
 Als eingelogter Benutzer soll es möglich sein, sich die Songs von einem bestimmten Musiker anzuzeigen.
 
-User Story 9
+User Story 9:
 Registrierte Benutzer können ihre eigenen Songs/Events und persönlichen Daten im Profil ändern.
 
 #Heroku Deployment:
