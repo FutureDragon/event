@@ -109,5 +109,13 @@
   * warden (1.2.6)
   * web-console (2.3.0)
 
+#Vorhandene User
+*admin@admin.de Admin (PW:testtest)
+*fledermaus@buzzbeat.de mit Rolle: Musiker (PW:qwertz123)
+*evil@buzzbeat.de mit Rolle: Veranstalter (PW:qwertz123)
+
+#User Stories
+U
+
 #Heroku Deployment:
 http://buzzbeat.herokuapp.com/
