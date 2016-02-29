@@ -1,6 +1,6 @@
 #Buzzbeat
 
-#Installierte Gems:
+#Installierte Gems
   * actionmailer (4.2.4)
   * actionpack (4.2.4)
   * actionview (4.2.4)
@@ -142,5 +142,5 @@ Als eingelogter Benutzer soll es möglich sein, sich die Songs von einem bestimm
 User Story 9:
 Registrierte Benutzer können ihre eigenen Songs/Events und persönlichen Daten im Profil ändern.
 
-#Heroku Deployment:
+#Heroku Deployment
 http://buzzbeat.herokuapp.com/
